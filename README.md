@@ -1,2 +1,2 @@
-# redsec.github.io
-Offensive Security blog
+# redsec.github.io (R3dSec)
+My Offensive Security blog
