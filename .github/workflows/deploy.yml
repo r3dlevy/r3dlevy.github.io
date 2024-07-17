@@ -4,7 +4,7 @@ on:
   # Déclenchez le workflow chaque fois que vous poussez vers la branche `main`
   # Vous utilisez un nom de branche différent ? Remplacez `main` par le nom de votre branche
   push:
-    branches: [ main ]
+    branches: [ main, dev ]
   # Vous permet d'exécuter ce workflow manuellement à partir de l'onglet Actions sur GitHub.
   workflow_dispatch:
 
@@ -22,10 +22,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
         uses: withastro/action@v2
-        #with:
+        with:
+            version:9.4.0
             # path: . # L'emplacement racine de votre projet Astro dans le dépôt. (facultatif)
             # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (facultatif)
-            # package-manager: yarn # Le gestionnaire de paquets Node qui doit être utilisé pour installer les dépendances et build votre site. Détecté automatiquement en fonction de votre lockfile. (facultatif)
+            #package-manager:  # Le gestionnaire de paquets Node qui doit être utilisé pour installer les dépendances et build votre site. Détecté automatiquement en fonction de votre lockfile. (facultatif)
 
   deploy:
     needs: build
