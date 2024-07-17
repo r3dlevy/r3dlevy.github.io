@@ -26,7 +26,7 @@ jobs:
             # version: 9.4.0
             # path: . # L'emplacement racine de votre projet Astro dans le dépôt. (facultatif)
             node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (facultatif)
-            package-manager: pnpm # Le gestionnaire de paquets Node qui doit être utilisé pour installer les dépendances et build votre site. Détecté automatiquement en fonction de votre lockfile. (facultatif)
+            #package-manager: pnpm # Le gestionnaire de paquets Node qui doit être utilisé pour installer les dépendances et build votre site. Détecté automatiquement en fonction de votre lockfile. (facultatif)
 
   deploy:
     needs: build
