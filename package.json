@@ -3,6 +3,7 @@
   "description": "Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed.",
   "type": "module",
   "version": "3.0.0",
+  "packageManager": "pnpm@9.4.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -23,6 +24,5 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10"
-  },
-  "packageManager": "pnpm"
+  }
 }
