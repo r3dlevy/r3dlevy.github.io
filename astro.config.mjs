@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'http://localhost',
-  base: "https://github.com/r3dlevy/r3dlevy.github.io",
+  site: 'https://github.com/r3dlevy/r3dlevy.github.io',
+  //base: "https://github.com/r3dlevy/r3dlevy.github.io",
   integrations: [mdx(), sitemap(), tailwind()]
 });
