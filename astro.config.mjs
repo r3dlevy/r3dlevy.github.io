@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'http://localhost',
-  //base:"D:\\Hacking\\Projets\\Blog\\Code\\Dev\\astrofy\\dist",
+  base: "https://github.com/r3dlevy/r3dlevy.github.io",
   integrations: [mdx(), sitemap(), tailwind()]
 });
