@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug"
+import { Image } from "astro:assets";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="about">
+    <div class="mb-5">
+        <div class="text-4xl w-full font-bold">About</div>
+      </div>
+    <div class="text-xl py-1">My name is Jude Levy KAMO👋, alias <b>R3dLevy</b></div> 
+    <!-- <div class="text-3xl py-3 font-bold">Sharing Offensive Security Stuffs</div> -->
+    <!-- <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
+        <div class="w-[8.5rem]">
+          <Image class="mask mask-circle" format="webp" width={300} height={300} src="/profile_image.webp" alt="Profile image" />
+        </div>
+    </div> -->
+    <div class="py-2">
+
+      <text class="text-lg">
+        I perform penetration tests and offensive security tasks in my daily job. 
+        <br>To enhance my skills, I've set myself the challenge of writing posts and sharing knowledge, including publishing tools and scripts during my spare time.
+        <br> My current certifications are : OSCP, CRTP, CRTE, (OSEP Soon ^^)
+        <br><br>
+        One of the things that really encouraged me to create this blog is my recent interest in malware development in Windows using C#. The Udemy course "Offensive C#" by Naga Sai Nikhil played a significant role in inspiring me to share my knowledge and experiences in this field.
+        <br><br>
+        To ensure we're on the same page, this blog primarily focuses on:
+        <ul class="list-disc mx-6 mb-10 grid gap-2">
+
+            <li> Penetration testing</li>
+            <li> Red Teaming & C2</li>
+            <li> Malware Development</li>
+            <li> Active Directory Attacks</li>
+            <li> Other cool Stuff</li>
+        </ul>
+       
+        I hope you enjoy the content and that I can inspire others in the Infosec community with these articles, just as many others have inspired me over the years.
+        
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn" href="https://twitter.com/judekamo" target="_blank"> Let's connect!</a>
+    </div>
+  </div>
+ 
+</BaseLayout>
